@@ -1,0 +1,47 @@
+LOTOFÁCIL - MAPA DE FALHAS
+FLUXO DE TRABALHO PARA O GITHUB
+
+ESTRUTURA CORRETA NA RAIZ DO REPOSITÓRIO:
+
+.github/
+  workflows/
+    build-apk.yml
+app/
+  build.gradle
+  src/
+    main/
+      AndroidManifest.xml
+      java/com/lotofacil/mapafalhas/MainActivity.java
+      res/
+build.gradle
+settings.gradle
+gradle.properties
+README.md
+FLUXO_DE_TRABALHO.txt
+
+COMO SUBIR:
+1. Extraia o ZIP.
+2. Abra a pasta LOTOFACIL_MAPA_FALHAS_APP_FINAL.
+3. Selecione TUDO que está dentro dela.
+4. Envie esses arquivos/pastas para a RAIZ do repositório GitHub.
+5. Na página inicial do repositório precisam aparecer diretamente: app, .github, build.gradle e settings.gradle.
+6. Abra Actions.
+7. Abra "Compilar APK - Mapa de Falhas".
+8. Clique em Run workflow.
+9. Aguarde concluir em verde.
+10. Em Artifacts, baixe LOTOFACIL-MAPA-FALHAS-APK.
+11. Extraia o artifact e instale o app-debug.apk.
+
+PADRÃO DE BUILD:
+- Ubuntu latest
+- Java Temurin 17
+- Android SDK 35
+- Build Tools 35.0.0
+- Gradle 8.9
+- Android Gradle Plugin 8.7.3
+- Comando: gradle clean :app:assembleDebug --stacktrace --no-daemon
+
+IMPORTANTE:
+- Este projeto NÃO depende de gradlew.
+- NÃO usar chmod +x gradlew.
+- NÃO colocar uma pasta extra por cima do conteúdo ao enviar para o GitHub.
